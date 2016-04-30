@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package myproto;
+
+//java_declaration
+option java_package = "com.fly.rich";
+option java_outer_classname = "msg";
+
+//csharp_declaration
+option csharp_namespace = "com.fly.rich.msg";
+
+//login message 
+message login{
+	int32 errcode = 3; //errorcode
+	int32 msgtype = 4; //message type
+	string usrname = 5;//username
+	string	pas = 6;	//password
+}
+
+message relogin{
+	int32 errcode = 7; //errorcode
+	string guid = 8;//player guid
+	int32 state = 9;//user state
+}
+//join room messge
+message rejoinroom{
+	int32 errcode = 10; //errorcode
+	int32 msgtype = 11; //message type
+	int32 joinsucc = 12;//username
+	string	guid = 13;	//guid
+}
+
+message joinroom{
+	int32 msgtype = 11; //message type
+	int32 roomnumber = 12;//username
+	string	guid = 13;	//guid
+}
+

@@ -1,0 +1,1 @@
+protoc -I=. --objc_out=. ./common.proto
